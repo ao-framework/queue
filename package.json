@@ -1,0 +1,30 @@
+{
+    "name": "@ao-framework/queue",
+    "version": "0.0.1",
+    "description": "{{description}}",
+    "main": "dist/src/index",
+    "types": "dist/src/index.d.ts",
+    "scripts": {
+        "test": "jest",
+        "dev": "tsc --watch",
+        "build": "tsc"
+    },
+    "author": "Josh Miller",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^22.2.0",
+        "@types/node": "^10.12.12",
+        "jest": "^22.4.2",
+        "typescript": "^2.7.2"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "collectCoverage": true,
+        "collectCoverageFrom": [
+            "dist/src/**/*.js",
+            "!**dist/src/interfaces/**"
+        ],
+        "verbose": true,
+        "testURL": "http://localhost/"
+    }
+}

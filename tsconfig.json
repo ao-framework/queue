@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "module": "commonjs",
+        "lib": [
+            "es2015",
+            "es2015.promise",
+            "dom",
+            "scripthost"
+        ],
+        "declaration": true,
+        "outDir": "./dist",
+        "moduleResolution": "node"
+    }
+}
