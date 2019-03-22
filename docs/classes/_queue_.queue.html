@@ -87,9 +87,10 @@
 								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_queue_.queue.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_queue_.queue.html#halted" class="tsd-kind-icon">halted</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_queue_.queue.html#max" class="tsd-kind-icon">max</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_queue_.queue.html#processing" class="tsd-kind-icon">processing</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_queue_.queue.html#queue" class="tsd-kind-icon">queue</a></li>
@@ -98,6 +99,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#halt" class="tsd-kind-icon">halt</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_queue_.queue.html#makestack" class="tsd-kind-icon">make<wbr>Stack</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_queue_.queue.html#process" class="tsd-kind-icon">process</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#push" class="tsd-kind-icon">push</a></li>
@@ -119,7 +121,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ao-framework/queue/blob/c43b737/src/queue.ts#L13">queue.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/ao-framework/queue/blob/647b3d4/src/queue.ts#L16">queue.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -143,15 +145,30 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="halted" class="tsd-anchor"></a>
+					<h3>halted</h3>
+					<div class="tsd-signature tsd-kind-icon">halted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ao-framework/queue/blob/647b3d4/src/queue.ts#L7">queue.ts:7</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether or not the queue has been halted</p>
+						</div>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="max" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> max</h3>
 					<div class="tsd-signature tsd-kind-icon">max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ao-framework/queue/blob/c43b737/src/queue.ts#L19">queue.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/ao-framework/queue/blob/647b3d4/src/queue.ts#L23">queue.ts:23</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -166,13 +183,12 @@
 					<div class="tsd-signature tsd-kind-icon">processing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ao-framework/queue/blob/c43b737/src/queue.ts#L8">queue.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/ao-framework/queue/blob/647b3d4/src/queue.ts#L11">queue.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Whether or not a queuable
-							list is processing</p>
+							<p>Whether or not a queuable list is processing</p>
 						</div>
 					</div>
 				</section>
@@ -182,7 +198,7 @@
 					<div class="tsd-signature tsd-kind-icon">queue<span class="tsd-signature-symbol">:</span> <a href="../modules/_interfaces_queueable_interface_.html#queueable" class="tsd-signature-type">Queueable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ao-framework/queue/blob/c43b737/src/queue.ts#L13">queue.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/ao-framework/queue/blob/647b3d4/src/queue.ts#L16">queue.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -194,6 +210,23 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="halt" class="tsd-anchor"></a>
+					<h3>halt</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">halt<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ao-framework/queue/blob/647b3d4/src/queue.ts#L74">queue.ts:74</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
 					<a name="makestack" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> make<wbr>Stack</h3>
@@ -204,7 +237,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ao-framework/queue/blob/c43b737/src/queue.ts#L46">queue.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/ao-framework/queue/blob/647b3d4/src/queue.ts#L50">queue.ts:50</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -226,7 +259,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ao-framework/queue/blob/c43b737/src/queue.ts#L55">queue.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/ao-framework/queue/blob/647b3d4/src/queue.ts#L59">queue.ts:59</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -248,7 +281,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ao-framework/queue/blob/c43b737/src/queue.ts#L24">queue.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/ao-framework/queue/blob/647b3d4/src/queue.ts#L28">queue.ts:28</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -276,7 +309,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ao-framework/queue/blob/c43b737/src/queue.ts#L38">queue.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/ao-framework/queue/blob/647b3d4/src/queue.ts#L42">queue.ts:42</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -325,6 +358,9 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="_queue_.queue.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_queue_.queue.html#halted" class="tsd-kind-icon">halted</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_queue_.queue.html#max" class="tsd-kind-icon">max</a>
 							</li>
@@ -333,6 +369,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_queue_.queue.html#queue" class="tsd-kind-icon">queue</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_queue_.queue.html#halt" class="tsd-kind-icon">halt</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="_queue_.queue.html#makestack" class="tsd-kind-icon">make<wbr>Stack</a>
