@@ -2,8 +2,11 @@ import { Queueable } from "./interfaces/queueable.interface";
 
 export default class Queue {
     /**
-     * Whether or not a queuable
-     * list is processing
+     * Whether or not the queue has been halted
+     */
+    public halted: boolean = false;
+    /**
+     * Whether or not a queuable list is processing
      */
     private processing: boolean = false;
 
@@ -14,6 +17,7 @@ export default class Queue {
 
     /**
      * Creates an instance of Queue
+     * 
      * @param max Max number of queueables
      */
     public constructor(private max: number = null) { }
@@ -57,6 +61,7 @@ export default class Queue {
         let stack = this.makeStack();
         for (let queueable of stack) {
             try {
+                if (this.halted) { return }
                 await queueable()
             } catch (err) { }
         }
@@ -64,5 +69,9 @@ export default class Queue {
         if (this.queue.length > 0) {
             this.process()
         }
+    }
+
+    public halt() {
+        this.halted = true;
     }
 }
