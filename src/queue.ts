@@ -1,10 +1,6 @@
-type Queueable = () => Promise<any>
+import { Queueable } from "./interfaces/queueable.interface";
 
-/**
- * Definition of Queue
- */
 export default class Queue {
-
     /**
      * Whether or not a queuable
      * list is processing
