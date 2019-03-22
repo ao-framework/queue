@@ -59,9 +59,19 @@ export default class Queue {
     private async process() {
         this.processing = true;
         let stack = this.makeStack();
-        for (let queueable of stack) {
+        let called: number[] = [];
+        for (let [index, queueable] of stack.entries()) {
             try {
-                if (this.halted) { return }
+                if (this.halted) {
+                    called.reverse().forEach(index => {
+                        stack.splice(index, 1)
+                    })
+                    stack.reverse().forEach(queueable => {
+                        this.queue.unshift(queueable)
+                    })
+                    return
+                }
+                called.push(index);
                 await queueable()
             } catch (err) { }
         }
@@ -71,6 +81,9 @@ export default class Queue {
         }
     }
 
+    /**
+     * Halt the queue in place
+     */
     public halt() {
         this.halted = true;
     }
