@@ -7,7 +7,8 @@
     "scripts": {
         "test": "jest",
         "dev": "tsc --watch",
-        "build": "tsc"
+        "build": "tsc",
+        "doc": "typedoc --out docs src && touch docs/.nojekyll"
     },
     "author": "Josh Miller",
     "license": "MIT",
@@ -15,6 +16,7 @@
         "@types/jest": "^22.2.0",
         "@types/node": "^10.12.12",
         "jest": "^22.4.2",
+        "typedoc": "^0.14.2",
         "typescript": "^2.7.2"
     },
     "jest": {
