@@ -3,6 +3,8 @@
 <b>Queue</b>
 </p>
 
+<p align="center"><em>Currently in early development. Breaking changes will occur frequently.</em></p>
+
 **Queue** is a library for managing sequential promises in a bound or unbound haltable queue.
 
 #### Install
