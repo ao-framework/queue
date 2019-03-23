@@ -63,15 +63,11 @@ export default class Queue {
         for (let [index, queueable] of stack.entries()) {
             try {
                 if (this.halted) {
-                    called.reverse().forEach(index => {
-                        stack.splice(index, 1)
-                    })
-                    stack.reverse().forEach(queueable => {
-                        this.queue.unshift(queueable)
-                    })
-                    return
+                    called.forEach(index => stack.splice(index, 1))
+                    stack.reverse().forEach(item => this.queue.unshift(item));
+                    return;
                 }
-                called.push(index);
+                called.unshift(index);
                 await queueable()
             } catch (err) { }
         }
@@ -86,5 +82,13 @@ export default class Queue {
      */
     public halt() {
         this.halted = true;
+    }
+
+    /**
+     * Resume the queue from where it was halted
+     */
+    public resume() {
+        this.halted = false;
+        this.process();
     }
 }
