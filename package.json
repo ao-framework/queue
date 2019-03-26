@@ -28,5 +28,8 @@
         ],
         "verbose": true,
         "testURL": "http://localhost/"
+    },
+    "dependencies": {
+        "@ao-framework/portals": "0.0.1"
     }
 }
