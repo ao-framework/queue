@@ -31,5 +31,17 @@
     },
     "dependencies": {
         "@ao-framework/portals": "0.0.1"
-    }
+    },
+    "directories": {
+        "doc": "docs",
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ao-framework/queue.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ao-framework/queue/issues"
+    },
+    "homepage": "https://github.com/ao-framework/queue#readme"
 }
