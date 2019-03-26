@@ -21,8 +21,8 @@ import Queue from "@ao-framework/queue"
 ```ts
 let queue = new Queue(100);
 
-queue.push(async () => {
-    //do something
+queue.push(() => {
+    return Promise.resolve().catch(err => {})
 }).catch(err => {
     //max exceeded
 })
