@@ -68,6 +68,7 @@
 					<img width="150" src="https://ao-framework.github.io/website/ao.logo.svg"><br>
 					<b>Queue</b>
 				</p>
+				<p align="center"><em>Currently in early development. Breaking changes will occur frequently.</em></p>
 				<p><strong>Queue</strong> is a library for managing sequential promises in a bound or unbound haltable queue.</p>
 				<h4 id="install">Install</h4>
 				<pre><code class="language-bash">npm install @ao-framework/queue</code></pre>
@@ -76,8 +77,8 @@
 				<h4 id="usage">Usage</h4>
 				<pre><code class="language-ts"><span class="hljs-keyword">let</span> queue = <span class="hljs-keyword">new</span> Queue(<span class="hljs-number">100</span>);
 
-queue.push(<span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-comment">//do something</span>
+queue.push(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve().catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> {})
 }).catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> {
     <span class="hljs-comment">//max exceeded</span>
 })</code></pre>
