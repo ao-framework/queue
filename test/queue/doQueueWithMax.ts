@@ -21,7 +21,7 @@ export function doQueueWithMax(done) {
             }, 300);
         });
     }).catch(err => {
-        expect(err.message === "Max level exceeded");
+        expect(err).toBeInstanceOf(Error);
         done();
     });
 }
